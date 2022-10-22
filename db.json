@@ -36,5 +36,18 @@
       "id": 9
     }
   ],
-  "usuarios": []
+  "usuarios": [
+    {
+      "nombre": "Carlos Gonzalo Gallardo",
+      "email": "gonzalogallardo94.gg@gmail.com",
+      "password": "loscedros",
+      "id": 1
+    },
+    {
+      "nombre": "agustin herrera",
+      "email": "agustinherrera@gmail.com",
+      "password": "gonzalo1",
+      "id": 2
+    }
+  ]
 }

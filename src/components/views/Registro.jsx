@@ -1,5 +1,6 @@
 import { Card, Container, Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { crearUsuario } from "../helpers/queries";
 
 const Registro = () => {
   const {
@@ -8,8 +9,15 @@ const Registro = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (datos) => {
+    console.log(datos);
+    crearUsuario(datos).then((respuesta)=>{
+      if(respuesta.status === 201){
+       console.log("usuario creado")
+      }else{
+        console.log("el usuario no se a creado")
+      }
+    })
   };
 
   return (
@@ -20,8 +28,11 @@ const Registro = () => {
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombreApellido">
               <Form.Label>Nombre y Apellido</Form.Label>
-              <Form.Control type="text" placeholder="Ej: Juan Perez"   {...register('nombre',{
-                  required:'El nombre de password es obligatorio'
+              <Form.Control
+                type="text"
+                placeholder="Ej: Juan Perez"
+                {...register("nombre", {
+                  required: "El nombre de password es obligatorio",
                 })}
               />
               <Form.Text className="text-danger">
@@ -30,8 +41,11 @@ const Registro = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="juanperez@gmail.com"   {...register('email',{
-                  required:'El nombre de password es obligatorio'
+              <Form.Control
+                type="email"
+                placeholder="juanperez@gmail.com"
+                {...register("email", {
+                  required: "El nombre de password es obligatorio",
                 })}
               />
               <Form.Text className="text-danger">
@@ -41,8 +55,11 @@ const Registro = () => {
 
             <Form.Group className="mb-3" controlId="formPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password"  {...register('password',{
-                  required:'El nombre de password es obligatorio'
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                {...register("password", {
+                  required: "El nombre de password es obligatorio",
                 })}
               />
               <Form.Text className="text-danger">

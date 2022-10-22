@@ -1,6 +1,7 @@
 //archivo que nos siver para hacer las consultas a la api (json-server)
 
 const URL ='http://localhost:3004/productos';
+const usuariosURL="http://localhost:3004/usuarios";
 
 // tipos de peticiones
 // peticion GET que trae todos los productos o un producto
@@ -65,6 +66,20 @@ export const editarProductoAPI = async(id, datosActualizados)=>{
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(datosActualizados)
+        });
+        return respuesta;
+    }catch(error){
+        console.log(error);
+    }
+}
+export const crearUsuario = async(usurario)=>{
+    try{
+        const respuesta = await fetch(usuariosURL,{
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(usurario)
         });
         return respuesta;
     }catch(error){

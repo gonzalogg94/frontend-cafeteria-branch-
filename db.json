@@ -10,8 +10,8 @@
     {
       "nombreProducto": "brownie",
       "precio": 250,
+      "imagen": "https://images.pexels.com/photos/14040187/pexels-photo-14040187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "dulce",
-      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 2
     },
     {
@@ -24,15 +24,15 @@
     {
       "nombreProducto": "facturas",
       "precio": "50",
-      "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "dulce",
       "id": 8
     },
     {
-      "nombreProducto": "factura con dulce de leche",
-      "precio": "80",
-      "imagen": "https://images.pexels.com/photos/1672304/pexels-photo-1672304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "categoria": "dulce",
+      "nombreProducto": "licuado",
+      "precio": "299",
+      "imagen": "https://media.istockphoto.com/photos/banana-almond-smoothie-with-cinnamon-and-oat-flakes-and-coconut-milk-picture-id1018364696?b=1&k=20&m=1018364696&s=612x612&w=0&h=QJgOxKDveRI-QnRunjx-Ep8uZatAdp09EC3d4Tm1SEU=",
+      "categoria": "bebida fria",
       "id": 9
     }
   ],

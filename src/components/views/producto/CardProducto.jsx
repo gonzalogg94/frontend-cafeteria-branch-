@@ -2,7 +2,7 @@ import React from "react";
 import {Card } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 
-const CardProducto = ({ producto}) => {
+const CardProducto = ({producto}) => {
   return (
     <Card className="mt-5">
       <Card.Img
